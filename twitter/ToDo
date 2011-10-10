@@ -1,0 +1,6 @@
+get-twitter-profile:
+[ ] Getting in an automated way the date to init the graph. It has to take into account the number of posts to see what is the date of firstone. Now it's done manually by setting var_init_year/month/day variables
+
+get-galician-census:
+[ ] Getting users by means of Location.
+[ ] Getting users by means of language used (galician).
