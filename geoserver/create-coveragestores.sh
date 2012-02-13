@@ -34,10 +34,10 @@ do
  curl -u $user:$passwd -v -XPUT -H 'Content-Type: text/plain' -d 'file:'${file} ${geoserver_uri}/rest/workspaces/$workspace/coveragestores/$store/external.geotiff?configure=first\&coverageName=$store
  echo "   * Layer added to coveragestore"
 
- # ENABLE LAYER
+ # ENABLE LAYER BUT NOT ADVERTISING IT
  # it's not possible to set SRS from REST, so enable the layer is wasteful without that. At least, with the layer I've tested, which geoserver didn't recognize the SRS.
- curl -u $user:$passwd -v -XPUT -H 'Content-Type: text/xml' -d '<layer><enabled>true</enabled></layer>' ${geoserver_uri}/rest/layers/$layer
- echo "   * Layer enabled"
+ curl -u $user:$passwd -v -XPUT -H 'Content-Type: text/xml' -d '<layer><metadata><entry key="advertised">false</entry></metadata><enabled>true</enabled></layer>' ${geoserver_uri}/rest/layers/$layer
+ echo "   * Layer enabled & *not* advertised"
 
  # ENABLE COVERAGE
  # after adding the layer, and if it has right SRS, it's possible to enable the store
