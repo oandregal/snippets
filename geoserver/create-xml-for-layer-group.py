@@ -60,5 +60,5 @@ if __name__ == "__main__":
     for layer in layers:
         styles.append("raster")
     xml = createXML(layer_group_name, layers, styles)
-    file = open('./layergroup.xml', 'w')
+    file = open('/tmp/layergroup.xml', 'w')
     file.write(xml)

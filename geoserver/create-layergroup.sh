@@ -26,8 +26,18 @@
 # </layerGroup>
 # it's needed to create the group with all the layer, sent only one of them, will delete the previous configuration
 
-user=${1}
-passwd=${2}
+geoserver_uri=${1}
+user=${2}
+passwd=${3}
+layergroup_name=${4}
+directory=${5}
 
-curl -u $user:$passwd -XPOST -d @layergroup.xml -H 'Content-type: text/xml' http://localhost:8000/geoserver/rest/layergroups
-echo "---------------- LAYER GROUP CREATED"
+for i in `ls ${directory}*.tif`; do
+ new_layer=`basename $i .tif`
+ layers="$layers $new_layer"
+done
+
+python create-xml-for-layer-group.py $layergroup_name  $layers
+
+curl -u $user:$passwd -XPOST -d @/tmp/layergroup.xml -H 'Content-type: text/xml' ${geoserver_uri}/rest/layergroups
+echo " - LayerGroup created: $layergroup_name"
