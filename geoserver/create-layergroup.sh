@@ -30,9 +30,9 @@ geoserver_uri=${1}
 user=${2}
 passwd=${3}
 layergroup_name=${4}
-directory=${5}
+root_directory=${5}
 
-for i in `ls ${directory}*.tif`; do
+for i in `find ${root_directory} -name *tif`; do
  new_layer=`basename $i .tif`
  layers="$layers $new_layer"
 done
