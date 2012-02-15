@@ -15,7 +15,7 @@ passwd=${3}
 workspace=${4}
 root_directory=${5}
 
-for i in `find ${directory} -name *tif`;
+for i in `find ${root_directory} -name *tif`;
 do
 
  file=$i
