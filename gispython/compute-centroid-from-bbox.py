@@ -21,6 +21,6 @@ with collection(input_file, "r") as input:
         for f in input:
             geom = shape(f['geometry'])
             point = geom.centroid
-            point.geom_type == 'Point'
+            point.geom_type = 'Point'
             f['geometry'] = mapping(point)
             output.write(f)
