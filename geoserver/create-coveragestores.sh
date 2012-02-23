@@ -4,10 +4,10 @@
 # @license: GPL v3
 
 # Take all tif files in a directory and add coveragestores and the correspondt layer to it
-# In order to minimize the time it takes to register a file, the script will be executed from the same server than geoserver. For a full discussion:
+# REST @ geoserver:
+# http://docs.geoserver.org/stable/en/user/restconfig/index.html
 # http://jira.codehaus.org/browse/GEOS-3966
 # http://jira.codehaus.org/secure/attachment/49082/document_url_and_external_coverage_uploads.patch
-# http://docs.geoserver.org/stable/en/user/restconfig/index.html
 
 geoserver_uri=${1}
 user=${2}
