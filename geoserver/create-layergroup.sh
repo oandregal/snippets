@@ -4,13 +4,16 @@
 # @license: GPL v3
 
 # Create a layergroup in geoserver through REST API.
-# In order to minimize the time it takes to register a file, the script will be executed from the same server than geoserver. For a full discussion:
+#
+# REST @ geoserver:
+# http://docs.geoserver.org/stable/en/user/restconfig/index.html
 # http://jira.codehaus.org/browse/GEOS-3966
 # http://jira.codehaus.org/secure/attachment/49082/document_url_and_external_coverage_uploads.patch
-# http://docs.geoserver.org/stable/en/user/restconfig/index.html
-
-# CREATE LAYER GROUP
-# needs the layergroupdescription.xml file, something like:
+#
+# LAYERGROUP.XML
+# It's needed to declare the group with all the layer, sent only one of them, will delete the previous configuration.
+#
+# Structure of layergroup.xml file:
 # <layerGroup>
 #   <name>nyc</name>
 #   <layers>
@@ -24,7 +27,7 @@
 #     <style>buildings_style</style>
 #   </styles>
 # </layerGroup>
-# it's needed to create the group with all the layer, sent only one of them, will delete the previous configuration
+#
 
 geoserver_uri=${1}
 user=${2}
