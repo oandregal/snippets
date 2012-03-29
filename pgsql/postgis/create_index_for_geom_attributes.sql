@@ -1,3 +1,6 @@
+-- @author: Andrés Maneiro <andres.maneiro@gmail.com>
+-- @license: GPL v3
+
 CREATE OR REPLACE FUNCTION create_index_for_geom_attribute(the_schema_name TEXT) RETURNS void AS $$
 DECLARE
         my_row RECORD;

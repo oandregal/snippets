@@ -1,3 +1,6 @@
+-- @author: Andrés Maneiro <andres.maneiro@gmail.com>
+-- @license: GPL v3
+
 CREATE OR REPLACE FUNCTION create_point_geometry_from_polygon(
        the_schema_name TEXT,
        the_table_name TEXT,

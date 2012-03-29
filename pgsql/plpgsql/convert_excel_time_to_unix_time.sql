@@ -1,6 +1,7 @@
+-- @author: Andrés Maneiro <andres.maneiro@gmail.com>
+-- @license: GPL v3
+
 -- This function converts an excel string field representing a date into a proper pgsql date field.
---
--- Author: Andrés Maneiro <andres.maneiro@gmail.com>
 --
 -- Details:
 -- * excel time starts in 00-01-1900.

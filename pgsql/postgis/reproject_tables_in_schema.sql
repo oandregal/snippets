@@ -1,3 +1,6 @@
+-- @author: Andrés Maneiro <andres.maneiro@gmail.com>
+-- @license: GPL v3
+
 -- Reproject tables in a given schema to a new SRID
 -- Will be reprojected all tables registered in geometry_columns table.
 -- Before using this query, you may consider useful execute Probe_Geometry_Columns();

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# @author: Andrés Maneiro <andres.maneiro@gmail.com>
+# @license: GPL v3
+
 #See original idea: http://conocimientoabierto.es/comentario-diseno-bases-de-datos-postgis/360/
 
 server=$1
