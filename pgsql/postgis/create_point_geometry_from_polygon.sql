@@ -18,6 +18,6 @@ BEGIN
                 ' SET '||the_geom_point_name||' = ST_Centroid('||the_geom_polygon_name||');';
         EXECUTE 'CREATE INDEX geometry_index_the_geom_point_'||the_table_name||
                 ' ON ' || the_schema_name ||'.'|| the_table_name ||
-                ' USING GIST('||the_geom_polygon_name||');';
+                ' USING GIST('||the_geom_point_name||');';
 END
 $$ LANGUAGE plpgsql;
