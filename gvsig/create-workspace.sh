@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# @author: Andres Maneiro <andres.maneiro@gmail.com>
+# license: GPL v3
+
 projects=(addons-manager andami appgvSIG binaries \
     extCAD extJCRS extJDBC extScripting extSymbology \
     extWMS libCorePlugin libDriverManager libExceptions \
