@@ -8,8 +8,8 @@ basic projects. The workspace will be created as a git repo in
 - a *branch* tracking every remote with *all* its history!
 
 
- What I'm likely work on next
-==============================
+What I'm likely work on next
+============================
 
 Likely the script will become something as
 
