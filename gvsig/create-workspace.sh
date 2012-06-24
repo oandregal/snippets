@@ -15,7 +15,7 @@ cd /tmp/workspace-from-scratch/
 git init
 echo "Base workspace" > README
 git add README
-git ci -m "Initial commit"
+git commit -m "Initial commit"
 
 for p in "${projects[@]}"; do
 
@@ -43,4 +43,4 @@ for p in "${projects[@]}"; do
 
 done
 
-git ci -m "gvSIG workspace done!"
+git commit -m "gvSIG workspace done!"
