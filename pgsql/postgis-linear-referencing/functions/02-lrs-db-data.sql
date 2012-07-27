@@ -9,6 +9,9 @@ INSERT INTO public.routes (id_route, measure_start, measure_end, the_geom)
 INSERT INTO public.routes (id_route, measure_start, measure_end, the_geom)
        VALUES ('GZ02', 0, 24,
               ST_GeomFromEWKT('SRID=23029;MULTILINESTRING((1 1, 2 4),(10 4, 20 4))'));
+INSERT INTO public.routes (id_route, measure_start, measure_end, the_geom)
+       VALUES ('GZ03', 8, 32,
+              ST_GeomFromEWKT('SRID=23029;LINESTRING(4 4, 2 2, 1 1)'));
 
 INSERT INTO public.events_point (id_route, measure) VALUES ('GZ01', 16);
 INSERT INTO public.events_point (id_route, measure) VALUES ('GZ02', 16);
