@@ -1,0 +1,8 @@
+lrs_host=localhost
+lrs_port=5432
+lrs_user=postgres
+
+lrs_owner=postgres
+lrs_template=template_postgis
+
+lrs_dbname=lrs_test
