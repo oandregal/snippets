@@ -25,6 +25,8 @@ CREATE TABLE public.events_point (
 );
 DELETE FROM geometry_columns WHERE f_table_schema='public' AND f_table_name='events_point';
 SELECT AddGeometryColumn('public', 'events_point', 'the_geom', 23029, 'POINTM', 3);
+ALTER TABLE public.events_point DROP CONSTRAINT enforce_dims_the_geom;
+ALTER TABLE public.events_point DROP CONSTRAINT enforce_geotype_the_geom;
 
 DROP TABLE IF EXISTS public.events_line;
 CREATE TABLE public.events_line(
@@ -36,3 +38,5 @@ CREATE TABLE public.events_line(
 );
 DELETE FROM geometry_columns WHERE f_table_schema='public' AND f_table_name='events_line';
 SELECT AddGeometryColumn('public', 'events_line', 'the_geom', 23029, 'LINESTRINGM', 3);
+ALTER TABLE public.events_line DROP CONSTRAINT enforce_dims_the_geom;
+ALTER TABLE public.events_line DROP CONSTRAINT enforce_geotype_the_geom;
